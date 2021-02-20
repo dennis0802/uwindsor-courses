@@ -2,7 +2,6 @@
 // Name        : truth_table.c
 // Author      : Dennis Dao
 // Version     : 1.0
-// Lab Section : 55
 // Description : Program that allows the user to make a truth table and set
 //               the output values of the boolean function F. The user can
 //				 output the minterms and the maxterms of the function.
