@@ -66,12 +66,6 @@ public class HeapSort {
             tree[0] = tree[i];
             tree[i] = temp;
             heapify(tree, 0, i-1);
-            /*
-            for(int num : tree){
-                System.out.printf("%d, ", num);
-            }
-            System.out.println();
-            */
         }
     }
     public static void main(String args[]){
