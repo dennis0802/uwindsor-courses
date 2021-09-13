@@ -1,0 +1,31 @@
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"A4.output");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END

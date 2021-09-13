@@ -1,0 +1,72 @@
+import java.io.*;
+
+terminal ARITH, LPAREN, RPAREN, ASSIGN, ID, SEMICOLON, MAIN, TYPE, RETURN, IF, READ, WRITE, BEGIN, END, BOOL, QSTRING, ELSE, COMMA, NUMBER, BOOLVAL;
+
+non terminal returnStmt, boolExpr, ifStmt, writeStmt, readStmt, formalParam, expr, actualParams;
+non terminal String program2, stmt, stmts, assignStmt, declareStmt, program, block, methodDecl, paramDef;
+
+precedence left ARITH, ELSE;
+precedence nonassoc BOOL;
+
+program2 ::= program:e {: RESULT = "import java.io.*;\n\npublic class A4 {\n\tstatic BufferedReader br_;\n\tstatic BufferedWriter bw_;\n\t" 
+                        + e + "\n}"; :}
+           ;
+program ::= methodDecl:e {:RESULT = e; :}
+          | methodDecl:e1 program:e2 {: RESULT= e1 + e2 ; :}
+          ;
+methodDecl ::= formalParam:e1 paramDef:e2 block:e3 {: RESULT= "static " + e1 + e2 + " throws Exception{\n\t\t" + e3  + "\n\t}\n\t"; :}
+             | TYPE MAIN ID paramDef block:e  {: RESULT= "public static void main(String args[]) throws Exception {\n\t\t"+ e + "\n\t}\n\t" ; :}
+             ;
+formalParam ::= TYPE:e1 ID:e2 {: RESULT= e1 + " " + e2 ; :}
+              | TYPE:e1 ID:e2 COMMA formalParam:e3 {: RESULT= e1 + " " + e2 + ", " + e3 ; :}
+              ;
+paramDef ::= LPAREN formalParam:e1 RPAREN {: RESULT = "(" + e1 + ")";:}
+        | LPAREN RPAREN {: RESULT = "()";:}
+        ;
+
+block ::= BEGIN stmts:e END {:RESULT = e; :}
+        ;
+stmts ::= stmt:e {: RESULT = e; :}
+        | stmt:e1 stmts:e2 {: RESULT = e1 + e2; :}
+        ;
+stmt ::= block:e {: RESULT = e;:}
+       | assignStmt:e SEMICOLON {: RESULT = e + ";\n\t\t";:}
+       | returnStmt:e SEMICOLON {: RESULT = e + ";\n\t\t";:}
+       | ifStmt:e {: RESULT = e + "\n\t\t";:}
+       | writeStmt:e SEMICOLON {: RESULT = e + ";\n\t\t";:}
+       | declareStmt:e SEMICOLON {: RESULT = e + ";\n\t\t";:}
+       | readStmt:e SEMICOLON {: RESULT = e + ";\n\t\t";:}
+       ;
+declareStmt ::= TYPE:e1 assignStmt:e2 {: RESULT = e1 + " " + e2 ; :} 
+              | TYPE:e1 ID:e2 {: RESULT = e1 + " " + e2 ; :} 
+              ;
+assignStmt ::= ID:e1 ASSIGN expr:e2 {: RESULT = e1 + " = " + e2 ;:}
+             | ID:e1 ASSIGN QSTRING:e2 {: RESULT = e1 + " = " + e2 ;:}
+             ;
+returnStmt ::= RETURN expr:e {: RESULT = "return " + e ; :}
+             ;
+
+ifStmt ::= IF boolExpr:e1 stmt: e2 {: RESULT = "if(" + e1 + "){\n\t\t\t" + e2 + "\n\t\t}"; :}
+         | IF boolExpr:e1 stmt: e2 ELSE stmt: e3 {: RESULT = "if(" + e1 + "){\n\t\t\t" + e2 + "\n\t\t}\n\t\telse{\n\t\t\t" + e3 + "\n\t\t}"; :}
+         ;
+
+writeStmt ::= WRITE LPAREN expr:e1 COMMA QSTRING:e2 RPAREN {: RESULT = "bw_ = new BufferedWriter(new FileWriter(" + e2 + "));\n\t\tbw_.write(String.valueOf("
+                                                                + e1 + "));\n\t\tbw_.close()" ; :}
+            ;
+readStmt ::= READ LPAREN ID:e1 COMMA QSTRING:e2 RPAREN {: RESULT = "br_ = new BufferedReader(new FileReader(" + e2 + "));\n\t\t" + e1 
+                                                        + " = new Integer(br_.readLine()).intValue();" ;:}
+           ;
+
+expr ::= expr:e1 ARITH:e2 expr:e3 {: RESULT = e1 + " " + e2 + " " + e3 ; :}
+       | NUMBER: e {:RESULT = e ;:}
+       | ID: e {: RESULT = e ;:}
+       | LPAREN expr:e RPAREN {: RESULT = "(" + e + ")" ;:}
+       | ID:e1 LPAREN actualParams:e2 RPAREN {: RESULT = e1 + "(" + e2 + ")"; :}
+       | ID:e1 LPAREN RPAREN {: RESULT = e1 + "()"; :}
+       ;
+boolExpr ::= LPAREN expr:e1 BOOL:e2 expr:e3 RPAREN {: RESULT = e1 + " " + e2 + " " + e3 ;:}
+           | LPAREN BOOLVAL:e RPAREN {: RESULT = e ;:}
+           ;
+actualParams ::= expr:e {: RESULT = e ; :}
+               | expr:e1 COMMA actualParams:e2 {: RESULT = e1 + ", " + e2 ; :}
+               ;
