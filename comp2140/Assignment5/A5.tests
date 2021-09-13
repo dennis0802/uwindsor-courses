@@ -1,0 +1,904 @@
+Testcase 1:
+
+INT MAIN F2() /** INCORRECT PROGRAM. scanner should catch all the input **/
+BEGIN
+INT X;
+@#$%^
+END
+
+Testcase 2:
+/**INCORRECT READ STATEMENT **/
+ INT MAIN F6() 
+  BEGIN 
+    INT X;
+    READ(X+5, "A41.INPUT");
+    WRITE (33, "XKOUTPUT"); 
+  END 
+
+Testcase 3:
+/** COMPILATION ERROR. MISSING VARIABLE DEFINITION **/
+ INT MAIN F2()
+ BEGIN  
+    X := 5;
+    Y := 3a
+    Z := X*X - Y*Y;
+  END
+
+Testcase 4:
+/** COMPILATION ERROR. FUNCTION CALL TO A NON-EXIST FUNCTION**/
+ INT MAIN F2()
+ BEGIN  
+    INT Z;
+    Z := F1(3,5)a;
+  END
+
+Testcase 5:
+ INT MAIN F2() /** CORRECT PROGRAM. OUTPUT: 25. A41.INPUT --> 10 **/
+ BEGIN  
+   INT X;
+   X  := 5;
+   BEGIN
+	INT Z; 
+	READ(Z, "../testcase/A4/A41");
+	WRITE(X+Z*2, "XKOUTPUT");
+   END	
+ END
+
+Testcase 6:
+INT MAIN F2() /**  CORRECT PROGRAM. FUNCTION CALLS. OUTPUT := 12.5**/
+BEGIN  
+   INT A;
+   A := F1(3);
+   REAL B;
+   B := F2(A, 4.5);
+   WRITE(B,"XKOUTPUT");	
+ END
+
+INT F1(INT A1)  
+BEGIN 
+	RETURN A1 + 5;
+END
+
+REAL F2(INT A1, REAL A2)
+BEGIN
+  REAL B;
+  B := A1 + A2;
+  RETURN B;
+END
+
+Testcase 7:
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	IF (X==Y) BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END ELSE
+  	 BEGIN Z := X*X - Y*Y + X *Y -X +Y/X/X; END 
+
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+/** CORRECT PROGRAM IF BOOLEAN EXPRESSION, NESTED BLOCKS OUTPUT: 4**/
+
+INT MAIN F1() 
+BEGIN
+INT A;
+A := F2();
+END
+
+INT F2()
+BEGIN
+	INT X; 
+	INT Y; 
+	INT Z;
+	Z := 4;
+	X := 4;
+	Y := 5;
+  	IF (X==Y) Z := X*X - Y*Y + X *Y -X +Y/X/X;
+	IF(X!=Y)
+	BEGIN
+		IF(X+Y == 5)
+		BEGIN
+		 Z := X+Y-4;
+		 Y := Z-2;
+		 RETURN 0;
+		END
+		WRITE(Z,"XKOUTPUT");
+	END ELSE BEGIN 
+		INT A;
+	END
+	RETURN 1;
+END
+
+Testcase 8:
+INT MAIN F()  /** CORRECT "PROGRAM" & * & % @ ! */ WITH QSTRING**/
+BEGIN
+	STRING x;
+	x := "100";
+	WRITE(x, "XKOUTPUT");
+END
+
+Testcase 9:
+INT MAIN F()  /** CORRECT "PROGRAM" & * & % @ ! */ WITH QSTRING A41.INPUT = 10 RESULT = 110 **/
+BEGIN
+	INT X;
+	X :=3;
+	IF(X==3) 
+	BEGIN
+        	READ(X,"../testcase/A4/A41");
+	END  ELSE BEGIN 
+		INT Y;
+	END
+	WRITE( X+100, "XKOUTPUT");
+END
+
+Testcase 10:
+INT MAIN F() /**INCORRECT PROGRAM: EMPTY BLOCK**/ 
+BEGIN
+	INT X;
+	X :=3;
+	INT A;
+	INT B;
+	INT C;
+	
+	A := 1+(2-3*(4/5*(6-7))+(8-9));
+	B := 1+(2-3*(4/5*(6-7))+(8-9));
+	C := 1+(2-3*(4/5*(6-7))+(8-9));
+
+	IF(X==3) 
+	BEGIN
+	END  ELSE BEGIN 
+	END
+END
