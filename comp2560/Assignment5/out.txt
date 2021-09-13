@@ -1,0 +1,9 @@
+Here is more text
+This time for the child to read
+And not reverse with system calls
+
+Child terminating.
+
+My child has terminated.
+My child 10202 has terminated and I have received the status 5120
+Child status = 20

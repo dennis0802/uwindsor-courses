@@ -1,0 +1,3 @@
+Here is more text
+This time for the child to read
+And not reverse with system calls
