@@ -1,0 +1,209 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhmtl11/DTD/xhtml11.dtd">
+<!-- XML/XHTML boilerplate code -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>   
+  <title>Feedback</title>
+
+  <style type="text/css">
+    /* Navigation bar on the top of the page */
+    ul.navigation {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color:#13b6ae
+    }
+    li.navigation {
+      float: left;
+      display: block;
+      text-align: center;
+      font-size: 25px;
+      padding: 14px 16px;
+      border-right: 3px solid #ffffff;
+    }
+    /* Last item in the navigation bar has no right border */
+    li:last-child {
+      border-right: none;
+    }
+    li a:hover {
+      background-color:#4f7270
+    }
+    li.active {
+      float: left;
+      display: block;
+      text-align: center;
+      font-size: 25px;
+      padding: 14px 16px;
+      background-color:#86fff9
+    }
+    a:visited{
+      color:#5f298b
+    }
+
+    /* Proper indentation for paragraph */
+    p.indent {
+      text-indent: 30px;
+    }
+  </style>
+
+</head>
+
+<!-- Page Content -->
+<body style="background-color:#baf2ef">
+
+  <div id="header">
+    <div id="nav">
+      <ul class="navigation">
+        <li class="navigation"><a href="index.html">Home</a></li>
+        <li class="navigation"><a href="schedule.html">My Schedule</a></li>
+        <li class="navigation"><a href="likes.html">My Interests</a></li>
+        <li class="navigation"><a href="imgmap.html">Image Map</a></li>
+        <li class="active"><a href="feedback.html">Feedback</a></li>
+        <li class="navigation"><a href="citation.html">Citations</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h1>Feedback Form</h1>
+
+  <p>
+    <img src="falldesk.png" alt="A desk with fall elements" width="187" height="140" style="float:left; padding: 8px;" /><br />
+    I'd like to hear your opinion of this website. With feedback, I can know what I need to improve on for this site and<br />
+    future sites I may make. Everything you submit here will appear in a popup window when submitted. All responses are sent to<br />
+    <a href="mailto:&#100;&#097;&#111;&#49;&#49;&#52;&#64;&#117;&#119;&#105;&#110;&#100;&#115;&#111;&#114;&#46;&#99;&#97;">dao114@uwindsor.ca</a>.
+    To restrict inputs to valid inputs, a regex <i>(regular expression)</i> pattern from a reference site<br />
+    has been used to do so. This regex pattern can be found at <a href="https://www.w3schools.com/tags/att_input_pattern.asp">https://www.w3schools.com/tags/att_input_pattern.asp</a><br />
+    In this survey, I would like to get your thoughts of this website and a little information about you, the viewer evaluating<br />
+    this website. Please be <b>honest, constructive, and professional</b> with your feedback. I will be able to work with<br />
+    that feedback more effectively than feedback that's irrelevant or does nothing to evaluate the site. Overall, I hope to hear<br />
+    your thoughts about this website.
+  </p>
+
+  <!-- Form starts here -->
+  <form name="my_form" action="mailto:&#100;&#097;&#111;&#49;&#49;&#52;&#64;&#117;&#119;&#105;&#110;&#100;&#115;&#111;&#114;&#46;&#99;&#97;" method="post" enctype="text/plain">
+    <!-- Feedback Part 1 - Basic Info -->
+    <fieldset>
+      <p>
+        <label class="question" for="name">What is your name?</label>
+        <input type="text" id="name" name="SubmittedName" placeholder="Enter your name." size="50" required autofocus />
+      </p>
+
+      <!-- Restrict email to valid emails character-wise -->
+      <p>
+        <label class="text" for="email">What is your email?</label>
+        <input type="text" id="email" name="SubmittedEmail" placeholder="Enter a valid email" size="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+      </p>
+    </fieldset>
+
+    <!-- Feedback Part 2 - Survey Questions -->
+    <fieldset>
+      <legend>Survey Questions</legend>
+
+      <!-- Checkboxes -->
+      <p>
+        <span class="question">Please check all that apply:</span>
+        <br />
+        <input type="checkbox" id="like_it" name="Thoughts" value="I like your website" />
+        <label for="like_it"> I like your website.</label>
+        <br />
+        <input type="checkbox" id="like_visuals" name="Thoughts" value="I like the visual elements" />
+        <label for="like_it"> I like the visual elements of the website.</label>
+        <br />
+        <input type="checkbox" id="meets_requirement" name="Thoughts" value="Meets most requirements" />
+        <label for="like_it"> The website meets most of the requirements for the assignment.</label>
+        <br />
+        <input type="checkbox" id="improve_look" name="Thoughts" value="Needs visual work" />
+        <label for="improve_look"> Your website aesthetics needs work.</label>
+        <br />
+        <input type="checkbox" id="improve_index" name="Thoughts" value="Home page needs work" />
+        <label for="improve_index"> Your home page needs work.</label>
+        <br />
+        <input type="checkbox" id="improve_likes" name="Thoughts" value="Interests page needs work" />
+        <label for="improve_likes"> Your interest page needs work.</label>
+        <br />
+        <input type="checkbox" id="improve_form" name="Thoughts" value="Form page needs work" />
+        <label for="improve_form"> Your feedback form needs work.</label>
+        <br />
+        <input type="checkbox" id="improve_schedule" name="Thoughts" value="Schedule page needs work" />
+        <label for="improve_schedule"> Your schedule page needs work.</label>
+        <br />
+        <input type="checkbox" id="improve_imgmap" name="Thoughts" value="Imagemap page needs work" />
+        <label for="improve_imgmap"> Your imagemap page needs work.</label>
+        <br />
+      </p>
+
+      <!-- Scale rating -->
+      <p>
+        <label for="rate_scale">
+          <span class="question">Rate my site from 0-10:<br /></span>
+        </label>
+        <input type="number" id="rate_scale" name="Rating" min="0" max="10" step="1" value="5"/>
+      </p>
+
+      <!-- Radio options-->
+      <p>
+        <span class="question">What year of study are you in?</span>
+        <br />
+        <input type="radio" id="first_year" name="StudyYear" value="First year"/>
+        <label for="first_year">First-year student</label>
+        <br />
+        <input type="radio" id="second_year" name="StudyYear" value="Second year"/>
+        <label for="second_year">Second-year student</label>
+        <br />
+        <input type="radio" id="third_year" name="StudyYear" value="Third year"/>
+        <label for="third_year">Third-year student</label>
+        <br />
+        <input type="radio" id="fourth_year" name="StudyYear" value="Fourth year"/>
+        <label for="fourth_year">Fourth-year student</label>
+        <br />
+        <input type="radio" id="grad_year" name="StudyYear" value="Graduate"/>
+        <label for="grad_year">Graduate student</label><br />
+        <input type="radio" id="alumni" name="StudyYear" value="Alumni"/>
+        <label for="grad_year">Alumni</label><br />
+      </p>
+
+      <!-- Options to pick from -->
+      <p>
+        <span class="question">What would be a good way to significantly improve this site?</span></p>
+        <select id="how_improve" name ="Improvements">
+          <option value="You can't. It's good as is">You can't. It's good as is</option>
+          <option value="Keep learning advanced concepts">Continue learning advanced HTML and CSS programming</option>
+          <option value="Practice more HTML formatting">Practice more HTML formatting</option>
+          <option value="Practice more HTML coding">Practice more HTML coding</option>
+          <option value="Work with visuals">Work with more visual elements</option>
+          <option value="Images">Add more images</option>
+          <option value="Formatting">Look over website formatting</option>
+        </select>
+    </fieldset>
+
+    <!-- Feedback Part 3 - Long Feedback -->
+    <fieldset>
+      <legend>Miscellaneous Feedback</legend>
+      <p>
+        Leave any other feedback and messages here!<br />
+        If providing feedback, be sure it is <b>constructive and professional</b> feedback. <br />
+        <label for="message"><span class="question"></span></label>
+        <textarea id="message" name="Message" rows="7" cols="55"></textarea>
+      </p>
+    </fieldset>
+
+    <!-- Submission or reset-->
+    <div id="buttons">
+        <input type="submit" value="Click to submit"/> or
+        <input type="reset" value="Erase and start over"/>
+    </div>
+
+  <!-- End of form -->
+  </form>
+
+  <!-- Internal link to top and email link -->
+  <p>
+    <a href="#top">Return to top</a><br />
+    <a href="mailto:&#100;&#097;&#111;&#49;&#49;&#52;&#64;&#117;&#119;&#105;&#110;&#100;&#115;&#111;&#114;&#46;&#99;&#97;">
+    Contact me at dao114@uwindsor.ca!</a><br />
+  </p>
+
+</body>
+</html>
