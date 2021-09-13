@@ -11,7 +11,7 @@ import java.util.Random;
  * A class to test MergeSort and InsertionSort
  * Placed in both in the same file to use same random numbers
  */
-public class Lab7 {
+public class MergeVsInsertion {
     // Comparison counts
     static int mergeCount = 0;
     static long insertCount;
