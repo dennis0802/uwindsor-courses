@@ -5,5 +5,6 @@ As of September 13, 2021:
 * COMP2120, COMP2140, COMP2540 - Java
 * COMP2057 - HTML, CSS, JavaScript
 * COMP2660 - Assembly
+* COMP3110 (currently enrolled) - TBD 
 * COMP3150 (currently enrolled) - SQL
 * COMP3770 (currently enrolled) - C# and Unity
