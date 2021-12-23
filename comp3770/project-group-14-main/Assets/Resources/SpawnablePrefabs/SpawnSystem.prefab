@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5877978246519628620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212801373572878039}
+  - component: {fileID: 2958644290934517216}
+  - component: {fileID: 3233959932261149265}
+  m_Layer: 0
+  m_Name: SpawnSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1212801373572878039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877978246519628620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2958644290934517216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877978246519628620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 7acb8baca9cc0f34c8fa004ab3c90904
+  hasSpawned: 0
+--- !u!114 &3233959932261149265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877978246519628620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16297d50d98ee0d4bb7f2bf63a1d6545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  blueGun: {fileID: 9126983523929416681, guid: eb810f7d6f90d2b4ba26ad979a727ac7, type: 3}
+  blueSword: {fileID: 9126983523929416681, guid: 60042298765331649bf5c0b7034fd974, type: 3}
+  blueSpear: {fileID: 9126983523929416681, guid: 3eb477b1744e05d458b113b1fd36eb37, type: 3}
+  blueMagic: {fileID: 9126983523929416681, guid: 0822aece94e0c524db304fc87b097dd3, type: 3}
+  redGun: {fileID: 9126983523929416681, guid: ef032c1a8a90b3d44b0ae0e5f08c6220, type: 3}
+  redSword: {fileID: 9126983523929416681, guid: 83decd9b4afe40f428e35592e5e575f7, type: 3}
+  redSpear: {fileID: 9126983523929416681, guid: 1ab64845e4d256648bbd7977fd1c136d, type: 3}
+  redMagic: {fileID: 9126983523929416681, guid: 6c175c275ba674343a0ffb8ccf23c07e, type: 3}
