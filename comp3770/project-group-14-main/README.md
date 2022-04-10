@@ -7,8 +7,7 @@ Materials, Scene and Scripts are included in Assets. The rest files will be auto
 - Map Design by Jim Lin
 - Combat by Mingxi Guo and Arthur Wei
 - Demo videos:
-    - Pt. 1: Offline Features - https://ctl2.uwindsor.ca/uview/show/BC56A45C2B87AFE/
-    - Pt. 2: Online Features - https://ctl2.uwindsor.ca/uview/show/DB5328BC4CBE07F0/
+    - 2022/04/10 = UView site is retiring later in 2022; videos are unavailable
 
 **Note to Grader:**
 - Start with "MainScene", this contains the splash screen and will transition to the other scenes
