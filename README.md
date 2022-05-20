@@ -21,4 +21,6 @@ Future Courses (Tenative)
 * COMP3520 - Intro to Computer Graphics
 * COMP3710 - Artificial Intelligence Concepts
 * COMP4770 - Artificial Intelligence for Games
-* COMP4990A - Project Management, Techniques, and Tools
+* COMP4990 - Project Management, Techniques, and Tools
+* COMP4150 - Advanced and Practical Database Systems
+* 
