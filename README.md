@@ -14,6 +14,7 @@ As of April 27, 2022:
 * COMP3770: Game Design, Development, and Tools - C# and Unity
 * COMP2067: Programming for Beginners - Python
 * COMP2707: Advanced Web Design - HTML, CSS, JavaScript
+* COMP3220: Object-Oriented Software Analysis and Design - C#
 * COMP3300: Operating System Fundamentals - C
 * COMP3670: Computer Networks - TBA
 
