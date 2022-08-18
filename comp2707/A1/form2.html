@@ -1,0 +1,141 @@
+<!-- 
+    COMP2707 Assignment 1 - Task 2
+    Developer: Dennis Dao
+    May 13, 2022
+    v1.0
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark">
+        <meta name="supported-color-schemes" content="light dark">
+        <title>Order Form</title>
+
+        <!-- External style sheet for this form-->
+        <link rel="stylesheet" href="form2.css">
+    </head>
+
+    <!-- Form following what was displayed in the pdf's Task 2 -->
+    <body>
+        <div class = "container">
+            <form>
+                <h2 id="formtitle">Land of Boxes Order Form</h2>
+                <!-- User info entry (name, email, address, postal code)-->
+                <div>
+                    <label class="prompt" for="name">Name: </label>
+                    <input type="text" id="name" name="fname" placeholder="Name">
+                </div>
+
+                <div>
+                    <label class="prompt" for="name">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+
+                <div>
+                    <label id="address" for="address">Address: </label>
+                    <textarea id="message" name="Message" rows="4" cols="20"></textarea>
+                </div>
+
+                <div>
+                    <label class="prompt" for="postcode">Postcode: </label>
+                    <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+                </div>
+
+                <!-- Table portion of form -->
+                <div>
+                    <table>
+                        <!-- Header row -->
+                        <tr>
+                            <th>Product</th>
+                            <th>Part Number</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        <!-- Data rows beyond this row, inclusive-->
+                        <tr>
+                            <td>EconoBox</td>
+                            <td>LB100</td>
+                            <td><input type="number" id="quantity" value="0" min="0" name="quantity" class="tableInput"></td>
+                            <td>$1.99</td>
+                            <td><input type="number" id="subtotal" value="0" min="0" name="subtotal" class="tableInput" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Standard Box</td>
+                            <td>LB200</td>
+                            <td><input type="number" id="quantity" value="0" min="0" name="quantity" class="tableInput"></td>
+                            <td>$2.99</td>
+                            <td><input type="number" id="subtotal" value="0" min="0" name="subtotal" class="tableInput" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Premium Box</td>
+                            <td>LB300</td>
+                            <td><input type="number" id="quantity" value="0" min="0" name="quantity" class="tableInput"></td>
+                            <td>$3.99</td>
+                            <td><input type="number" id="subtotal" value="0" min="0" name="subtotal" class="tableInput" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Deluxe Box</td>
+                            <td>LB400</td>
+                            <td><input type="number" id="quantity" value="0" min="0" name="quantity" class="tableInput"></td>
+                            <td>$4.99</td>
+                            <td><input type="number" id="subtotal" value="0" min="0" name="subtotal" class="tableInput" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Super Deluxe Box</td>
+                            <td>LB500</td>
+                            <td><input type="number" id="quantity" value="0" min="0" name="quantity" class="tableInput"></td>
+                            <td>$5.99</td>
+                            <td><input type="number" id="subtotal" value="0" min="0" name="subtotal" class="tableInput" readonly></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" id="total">Total:</td>
+                            <td><input type="number" id="total" name="total" value="0" min="0" class="tableInput" readonly></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Credit card section -->
+                <h3><b>Credit Card Details</b></h3>
+                <!-- Divide the section so that credit card type is on the left, credit card number/date is on the right-->
+                <div id="credit">
+                    <div id="leftCredit">
+                        <span>Card Type:</span><br>
+                        <input type="radio" id="mastercard" name="creditcard" value="mastercard">
+                        <label for="mastercard">Mastercard</label>
+                        <br>
+                        <input type="radio" id="visa" name="creditcard" value="visa">
+                        <label for="visa">Visa</label>
+                        <br>
+                        <input type="radio" id="americanexpress" name="creditcard" value="americanexpress">
+                        <label for="americanexpress">American Express</label><br>
+                        <input type="radio" id="dinersclub" name="creditcard" value="dinersclub">
+                        <label for="dinersclub">Diners Club</label><br>
+                    </div>
+                    <div id="rightCredit">
+                        <br>
+                        <label class="creditPrompt" for="name">Card Number: </label>
+                        <input class="creditEntry" type="text" id="name" name="fname" size="13">
+                        <br>
+                        <label class="creditPrompt" for="name">Expiry Date: </label>
+                        <input class="creditEntry" type="text" id="name" name="fname" size="5">
+                    </div>
+                </div>
+                
+                <!-- Delivery address section -->
+                <div>
+                    <label id="deliveryAddress" for="deliveryaddress"><b>Delivery Address:</b> </label>
+                    <textarea id="message" name="Message" rows="4" cols="20"></textarea>
+                </div>
+
+                <!-- Submission/clear section -->
+                <div id="div_buttons">
+                    <input id="inputsubmit" type="submit" value="Send Order">
+                    <input id="inputcancel" type="reset" value="Clear Form">
+                </div>
+            </form>
+        </div>
+    </body> 
+</html>

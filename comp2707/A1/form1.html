@@ -1,0 +1,96 @@
+<!-- 
+    COMP2707 Assignment 1 - Task 1
+    Developer: Dennis Dao
+    May 13, 2022
+    v1.0
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark">
+        <meta name="supported-color-schemes" content="light dark">
+        <title>Registration Page</title>
+
+        <!-- External style sheet for this form-->
+        <link rel="stylesheet" href="form1.css">
+    </head>
+
+    <!-- Form following what was displayed in the pdf's Task 1-->
+    <body>
+        <div class = "container">
+            <form id="form">
+                <p id="formtitle">Sign Up<p>
+                <div>
+                    <label class="prompt" for="fname">First Name: </label>
+                    <input class="textInput" type="text" id="fname" name="fname"  placeholder="Enter First Name">
+                </div>
+
+                <div>
+                    <label class="prompt"  for="lname">Last Name: </label>
+                    <input class="textInput" type="text" id="lname" name="lname" placeholder="Enter Last Name">
+                </div>
+
+                <!-- Better to use the built-in date input instead of date month year by themselves -->
+                <div>
+                    <label class="prompt" for="birthday">Date of Birth: </label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+
+                <div>
+                    <span id="question">Gender:</span>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="gender" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="gender" for="female">Female</label>
+                </div>
+
+                <!-- Wasn't clear what countries to include, but listed a few and an other category -->
+                <div>
+                    <label class="prompt" for="country">Country: </label>
+                    <select id="country" name="Country">
+                        <!-- Allow "Country" as a "placeholder" but users can't select it-->
+                        <option value="Country" disabled selected>Country</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="prompt"  for="email">E-mail: </label>
+                    <input class="textInput" type="text" id="email" name="email" placeholder="Enter E-mail">
+                </div>
+
+                <div>
+                    <label class="prompt"  for="phone">Phone: </label>
+                    <input class="textInput" type="text" id="phone" name="phone" placeholder="Enter Phone">
+                </div>
+
+                <div>
+                    <label class="prompt"  for="password">Password: </label>
+                    <input class="textInput" type="password" id="password" name="password">
+                </div>
+
+                <div>
+                    <label class="prompt"  for="confirmPassword">Confirm Password: </label>
+                    <input class="textInput" type="password" id="confirmPassword" name="confirmPassword">
+                </div>
+
+                <div id="div_terms">
+                    <input type="checkbox" id="confirmTerms" name="confirmTerms" >
+                    <label id="terms" for="confirmTerms">I Agree to the Terms of Use</label>
+                </div>
+
+                <div id="div_buttons">
+                    <input id="inputsubmit" type="submit" value="Submit Query">
+                    <input id="inputcancel" type="button" value="Cancel">
+                </div>
+            </form>
+        </div>
+    </body> 
+</html>

@@ -1,0 +1,168 @@
+<!-- 
+    COMP2707 Assignment 2 - Task 1
+    Developer: Dennis Dao
+    June 8, 2022
+    v1.0
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark">
+        <meta name="supported-color-schemes" content="light dark">
+        <title>Registration Page</title>
+
+        <!-- External style sheet for this form-->
+        <link rel="stylesheet" href="form1.css">
+        <!-- JavaScript for this form -->
+        <script src="form1.js"></script>
+        <!-- AngularJS script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <!-- My implementations using AngularJS features -->
+        <script src="angular.js"></script>
+    </head>
+
+    <!-- Form following what was displayed in the pdf's Task 1-->
+    <!-- All sections are required -->
+    <body ng-app="myApp" ng-controller="formCtrl" style="background-color:#fff0d5;">
+        <div class = "container">
+            <form name="myform" id="form" onsubmit="if(verifyInputs(this)){alert('\nForm data will be collected in Assignment 3')}" novalidate>
+                <p id="formtitle">Sign Up<p>
+                <!-- Name has a min of 4 characters for both first and last -->
+                <div>
+                    <label class="prompt" for="fname">First Name<b>*</b>: </label>
+                    <input class="textInput" type="text" id="fname" name="fname" ng-model="firstname" ng-pattern="nameFormat" placeholder="Enter First Name" minlength="4" required>
+                    <br><label class="prompt">Min 4 charcters, alphabetic only</label>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.fname.$invalid">
+                        <span ng-show = "myform.fname.$error.required">First name required</span>
+                        <span ng-show = "myform.fname.$error.pattern">Incorrect name format</span>
+                    </span>
+                </div>
+
+                <div>
+                    <label class="prompt"  for="lname">Last Name<b>*</b>: </label>
+                    <input class="textInput" type="text" id="lname" name="lname" ng-model="lastname" ng-pattern="nameFormat" placeholder="Enter Last Name" minlength="4" required>
+                    <br><label class="prompt">Min 4 charcters, alphabetic only</label>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.lname.$invalid">
+                        <span ng-show = "myform.lname.$error.required">Last name required</span>
+                        <span ng-show = "myform.lname.$error.pattern">Incorrect name format</span>
+                    </span>
+                </div>
+
+                <!-- Better to use the built-in date input instead of date month year by themselves -->
+                <div>
+                    <label class="prompt" for="birthday">Date of Birth<b>*</b>: </label>
+                    <input type="date" id="birthday" name="birthday" ng-model="birthday" required>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.birthday.$invalid">Enter birthday</span>
+                </div>
+
+                <div>
+                    <span id="question">Gender<b>*</b>:</span>
+                    <input type="radio" id="male" name="gender" value="male" ng-model="gender" required>
+                    <label class="gender" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" ng-model="gender" required>
+                    <label class="gender" for="female">Female</label>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.gender.$invalid">
+                        <span ng-show = "myform.gender.$error.required">Select a gender</span>
+                    </span>
+                </div>
+
+                <!-- Wasn't clear what countries to include, but listed a few and an other category -->
+                <!-- JavaScript will check if the value is still "Country", then throw error-->
+                <div>
+                    <label class="prompt" for="country">Country<b>*</b>: </label>
+                    <select id="country" name="Country" required>
+                        <!-- Country will be the default selected value but error will be thrown if attempting to submit with Country-->
+                        <option value="Country" style="display:none" disabled selected>Country</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br>
+                </div>
+
+                <div>
+                    <label class="prompt" for="email">E-mail<b>*</b>: </label>
+                    <input class="textInput" type="email" id="email" name="email" ng-model="email" placeholder="Enter E-mail" required>
+                    <br><label class="prompt">ex. jon@abc.com</label>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.email.$invalid">
+                        <span ng-show = "myform.email.$error.required">Email is required</span>
+                        <span ng-show = "myform.email.$error.email">Invalid email address</span>
+                    </span>
+                </div>
+
+                <div>
+                    <label class="prompt"  for="phone">Phone<b>*</b>: </label>
+                    <input class="textInput" type="text" id="phone" name="phone" ng-pattern="phoneFormat" ng-model="phone" placeholder="(xxx)-(xxx)-(xxxx)" required>
+                    <br><label class="prompt">(xxx)-(xxx)-(xxxx)</label>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.phone.$invalid">
+                        <span ng-show="myform.phone.$error.required">Phone required</span>
+                        <span ng-show="myform.phone.$error.pattern">Incorrect phone format</span>
+                    </span>
+                </div>
+
+                <!-- Password and confirming should match and have at least 8 characters-->
+                <!-- Matching will be checked via JavaScript -->
+                <div>
+                    <label class="prompt" for="password">Password<b>*</b>: </label>
+                    <input class="textInput" type="password" id="password" name="password" ng-model="password" ng-pattern="passwordFormat" minlength="8" required>
+                    <br><label class="prompt">Min. 8 characters with upper and lower case (A-z), a digit (0-9), and a special character (ex. $)</label>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.password.$invalid">
+                        <span ng-show="myform.password.$error.required">Password required</span>
+                        <span ng-show="myform.password.$error.pattern">Incorrect password format</span>
+                    </span>
+                </div>
+
+                <div>
+                    <label class="prompt" for="confirmPassword">Confirm Password<b>*</b>: </label>
+                    <input class="textInput" type="password" id="confirmPassword" name="confirmPassword" ng-model="confirmPassword" ng-pattern="passwordFormat" minlength="8" required>
+                    <br>
+                    <!-- Display error if invalid -->
+                    <span class="error" ng-show="myform.confirmPassword.$invalid">
+                        <span ng-show="myform.confirmPassword.$error.required">Password must be confirmed</span>
+                        <span ng-show="myform.confirmPassword.$error.pattern">Incorrect password format</span>
+                        <span ng-show="password!==confirmPassword">Passwords do not match</span>
+                    </span>
+                    <!-- Display whether password is valid -->
+                    <span class="error" ng-show="password && confirmPassword">
+                        <span ng-show="password!==confirmPassword">Passwords don't match</span>
+                        <span style="color:#adff2f" ng-show="password===confirmPassword">Passwords match</span>
+                    </span>
+                </div>
+
+                <div id="div_terms">
+                    <input type="checkbox" id="confirmTerms" name="confirmTerms" ng-model="confirmTerms" required>
+                    <label id="terms" for="confirmTerms">I Agree to the Terms of Use<b>*</b></label>
+                    <br><span id="errorTerms" ng-show="myform.confirmTerms.$error.required">Terms must be accepted</span>
+                </div>
+
+                <div id="div_buttons">
+                    <!-- Disable buttons until form entries are valid-->
+                    <input id="inputsubmit" type="submit" value="Submit Query" ng-disabled="myform.fname.$invalid ||
+                    myform.lname.$invalid || myform.birthday.$invalid || myform.email.$invalid || myform.phone.$invalid || 
+                    myform.password.$invalid || myform.confirmPassword.$invalid || myform.confirmTerms.$invalid ||
+                    password!==confirmPassword">
+                    <input id="inputcancel" type="button" value="Cancel">
+                </div>
+            </form>
+        </div>
+    </body> 
+</html>

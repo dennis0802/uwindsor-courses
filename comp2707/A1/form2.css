@@ -1,0 +1,121 @@
+/* 
+ * form2.html External Style Sheet
+ * Developer: Dennis Dao
+ * May 13, 2022
+ * v1.0
+ */
+
+/* Light and dark mode preferences */
+@media (prefers-color-scheme: dark){
+    p{
+        color:#ffffff;
+    }
+}
+
+/* For spacing out each section of the form */
+div{
+    margin-bottom: 10px;
+}
+
+div.container{
+    width: 100%;
+}
+
+label{
+    font-size:small;
+}
+
+/* For prompting the user */
+label.prompt{
+    text-align: right;
+    width: 75px;
+    display: inline-block;
+}
+
+/* Credit card prompting user */
+label.creditPrompt{
+    text-align: left;
+    width: 30%;
+    display: inline-block;
+    padding: 1px;
+}
+
+/* Credit card info entry */
+input.creditEntry{
+    height: 10px;
+    font-size: small;
+}
+
+/* Table portion of the form */
+table, tr, th{
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: left;
+    font-size:small;
+    width:500px;
+}
+
+td{
+    text-align: left;
+    border: 1px solid;
+    border-collapse: collapse;
+    font-size:small;
+}
+
+/* Make text area a static size */
+textarea{
+    resize:none;
+}
+
+/* Input fields in table are same size */
+input.tableInput{
+    width:70%
+}
+
+/* Form title */
+#formtitle{
+    color: #ffa500;
+    text-indent: 10px;
+    height:25px;
+}
+
+/* Address entry */
+#address{
+    width: 75px;
+    text-align: right;
+    display:inline-block;
+    position: relative; top:-25px;
+}
+
+#deliveryAddress{
+    width: 125px;
+    text-align: right;
+    display:inline-block;
+    position: relative; top:-25px;
+}
+
+/* For credit card entry section */
+#rightCredit{
+    position: relative; top:1px;
+    width: 300px;
+    display: inline-block;  *display: inline; zoom: 1;
+    vertical-align: top;
+    margin-bottom: 0px;
+}
+
+#leftCredit{
+    position: relative; left:0.5%;
+    display: inline-block; *display: inline; zoom: 1;
+    vertical-align: top;
+    margin-bottom: 0px;
+}
+
+#credit{
+    width:500px;
+    position:relative;top:-10px;
+}
+
+/* Table total price */
+#total{
+    text-align:right;
+}

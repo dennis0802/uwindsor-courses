@@ -1,0 +1,143 @@
+/* 
+ * form1.html External Style Sheet
+ * Developer: Dennis Dao
+ * June 8, 2022
+ * v1.0
+ */
+
+/* For spacing out each section of the form */
+div{
+    margin-bottom: 20px;
+}
+
+div.container{
+    width: 100%;
+}
+
+/* For the gender labels */
+label.gender{
+    color:#ffff00;
+    font-size: small;
+}
+
+/* For prompting the user */
+label.prompt{
+    color:#ffff00;
+    text-align: right;
+    width: 180px;
+    display: inline-block;
+    font-size: small;
+}
+
+/* Spacing the input */
+input.textInput{
+    width: 145px;
+}
+
+span.error{
+    color:#ff0000;
+    text-align: right;
+    width: 180px;
+    display: inline-block;
+    font-size: small;
+}
+
+/* For the agreement of terms alignment */
+#div_terms{
+    margin-left:180px;
+}
+
+#errorTerms{
+    color:#ff0000;
+    margin-left:22px;
+    font-size:11px;
+}
+
+#div_buttons{
+    background-color:#ffa500;
+    height: 50px;
+}
+
+/* For the agreement of terms alignment */
+#terms{
+    color:#ffff00;
+    text-align: left;
+    width: 60%;
+    display: inline-block;
+    font-size:11px;
+}
+
+/* For the submit button */
+#inputsubmit{
+    color:#ffffff;
+    background-color: #32cd32;
+    margin-left:150px;
+    margin-top: 10px;
+    border: 0px;
+    width: 100px;
+    height: 25px;
+}
+
+/* Make it obvious the button can be interacted with */
+#inputsubmit:hover{
+    color:#ffffff;
+    background-color: #008000;
+    margin-left:150px;
+    margin-top: 10px;
+    border: 0px;
+    width: 100px;
+    height: 25px;
+}
+
+#inputsubmit:disabled{
+    color:#ffffff;
+    background-color: #aabeaa;
+    margin-left:150px;
+    margin-top: 10px;
+    border: 0px;
+    width: 100px;
+    height: 25px;
+}
+
+/* For the cancel button */
+#inputcancel{
+    color:#ffffff;
+    background-color: #ff0000;
+    margin-top: 10px;
+    border: 0px;
+    width: 75px;
+    height: 25px;
+}
+
+/* Make it obvious the button can be interacted with */
+#inputcancel:hover{
+    color:#ffffff;
+    background-color: #8b0000;
+    margin-top: 10px;
+    border: 0px;
+    width: 75px;
+    height: 25px;
+}
+
+/* Form title */
+#formtitle{
+    background-color: #ffa500;
+    color: #ffff00;
+    text-indent: 10px;
+    height:25px;
+    font-size:20px;
+}
+
+/* For the gender section of the form */
+#question{
+    color: #ffff00; 
+    text-align: right; 
+    width: 180px; 
+    display: inline-block;
+    font-size: small;
+}
+
+/* For bg color of the form */
+#form{
+    background-color: #2f4f4f;
+}

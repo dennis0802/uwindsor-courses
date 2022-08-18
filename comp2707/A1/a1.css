@@ -1,0 +1,32 @@
+/* 
+ * a1.html External Style Sheet
+ * Developer: Dennis Dao
+ * May 13, 2022
+ * v1.0
+ */
+
+/* Light and dark mode preferences */
+@media (prefers-color-scheme: dark){
+    p{
+        color:#ffffff;
+    }
+}
+
+@media (prefers-color-scheme: light){
+    p{
+        text-indent:30px;
+    }
+}
+
+div.container{
+    width: 100%;
+}
+
+#bodyBg{
+    background-color:#82d3ff;
+}
+
+#embedSite{
+    width:80%;
+    height:500px;
+}
