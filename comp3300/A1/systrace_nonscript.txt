@@ -1,0 +1,85 @@
+execve("./a1", ["./a1"], 0x7ffd3b6c4c10 /* 37 vars */) = 0
+brk(NULL)                               = 0x55f5701b9000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=224917, ...}) = 0
+mmap(NULL, 224917, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f41189e8000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@n\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1839792, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4118a52000
+mmap(NULL, 1852680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4118820000
+mprotect(0x7f4118845000, 1662976, PROT_NONE) = 0
+mmap(0x7f4118845000, 1355776, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f4118845000
+mmap(0x7f4118990000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x170000) = 0x7f4118990000
+mmap(0x7f41189db000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ba000) = 0x7f41189db000
+mmap(0x7f41189e1000, 13576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f41189e1000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f4118a53540) = 0
+mprotect(0x7f41189db000, 12288, PROT_READ) = 0
+mprotect(0x55f56e48e000, 4096, PROT_READ) = 0
+mprotect(0x7f4118a4a000, 4096, PROT_READ) = 0
+munmap(0x7f41189e8000, 224917)          = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+brk(NULL)                               = 0x55f5701b9000
+brk(0x55f5701da000)                     = 0x55f5701da000
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+write(1, "Enter the number of source files"..., 39Enter the number of source files used: ) = 39
+read(0, 3
+"3\n", 1024)                    = 2
+write(1, "Enter a source file: ", 21Enter a source file: )   = 21
+read(0, file2.txt
+"file2.txt\n", 1024)            = 10
+write(1, "Source file entered: file2.txt\n\n", 32Source file entered: file2.txt
+
+) = 32
+openat(AT_FDCWD, "file2.txt", O_RDONLY) = 3
+close(3)                                = 0
+write(1, "Enter a source file: ", 21Enter a source file: )   = 21
+read(0, file1.txt
+"file1.txt\n", 1024)            = 10
+write(1, "Source file entered: file1.txt\n\n", 32Source file entered: file1.txt
+
+) = 32
+openat(AT_FDCWD, "file1.txt", O_RDONLY) = 3
+close(3)                                = 0
+write(1, "Enter a source file: ", 21Enter a source file: )   = 21
+read(0, file3.txt
+"file3.txt\n", 1024)            = 10
+write(1, "Source file entered: file3.txt\n\n", 32Source file entered: file3.txt
+
+) = 32
+openat(AT_FDCWD, "file3.txt", O_RDONLY) = 3
+close(3)                                = 0
+write(1, "Enter a destination file: ", 26Enter a destination file: ) = 26
+read(0, dest1.txt
+"dest1.txt\n", 1024)            = 10
+write(1, "Destination file entered: dest1."..., 37Destination file entered: dest1.txt
+
+) = 37
+openat(AT_FDCWD, "dest1.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "dest1.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+openat(AT_FDCWD, "file2.txt", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=29, ...}) = 0
+read(4, "This is the second text file\n", 8192) = 29
+read(4, "", 8192)                       = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+close(4)                                = 0
+openat(AT_FDCWD, "file1.txt", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=28, ...}) = 0
+read(4, "This is the first text file\n", 8192) = 28
+read(4, "", 8192)                       = 0
+close(4)                                = 0
+openat(AT_FDCWD, "file3.txt", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=111, ...}) = 0
+read(4, "This is the third text file\nBut "..., 8192) = 111
+read(4, "", 8192)                       = 0
+close(4)                                = 0
+write(1, "Copying successful.\n", 20Copying successful.
+)   = 20
+write(3, "This is the second text file\nThi"..., 168) = 168
+close(3)                                = 0
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
+exit_group(0)                           = ?
++++ exited with 0 +++
