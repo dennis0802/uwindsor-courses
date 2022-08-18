@@ -19,6 +19,7 @@
                 <?php
                     while($product = mysqli_fetch_assoc($product_set)){
                 ?>
+                
                     <tr>
                         <td>
                             <a href="<?php echo url_for('/product.php?prod_id=' . h(u($product['id'])));?>">
