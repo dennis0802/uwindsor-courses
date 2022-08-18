@@ -1,0 +1,260 @@
+/**
+ * Project CSS Sheet - Public Side
+ * Developer: Dennis Dao
+ * July 18, 2022
+ * v1.0
+ * Note: early start to experiment with page aesthetics and structure before building
+ */
+
+/* Links */
+header a:link{
+    color:#ffffff
+}
+
+header a:visited{
+    color:#bdbdbd
+}
+
+/* Horizontal scrollbar menu of options */
+div.scrollmenu {
+    background-color: rgb(80, 80, 80);
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 3px;
+}
+
+.selected{
+    background-color: rgb(0, 0, 0);
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: rgb(148, 148, 148);
+}
+
+/* Login formatting */
+#login{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    margin-top:5px;
+}
+
+/* General form formatting */
+form{
+    margin-left: 10px;
+}
+
+textarea{
+    resize: none;
+}
+
+select{
+    margin-left:3em;
+}
+
+/* Delete account link */
+#delete{
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top:10px;
+    color:#ff0000;
+}
+
+#delete:visited{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:10px;
+    color:#963030;
+}
+
+/* Display total */
+#total{
+    text-align:right;
+    clear: both;
+    margin: 1em 1em 1em 0;
+}
+
+/* Display products in categories */
+.productDisplay{
+    width: 33%;
+}
+
+a:hover img:not(header img){
+    opacity:0.3;
+}
+
+/* Reviews */
+.review{
+    font-size:medium;
+    margin-bottom: 10px;
+}
+
+.rating{
+    font-weight:bold;
+}
+
+/* Header table to display search bar and account link */
+#header-fields{
+    float:right;
+    margin-top:25px;
+    margin-right:100px;
+    border-spacing:30px;
+}
+
+/* Referenced from Kevin Skoglund's PHP with MySQL Essential Training 2 - Build a CMS Course*/
+/* The course was a continuation of A3's course - that was Part 1.
+/* https://www.linkedin.com/learning/php-with-mysql-essential-training-2-build-a-cms*/
+
+/* Centre of the page content */
+#page {
+    float: left;
+    width: 1100px;
+    /*height: 100%;*/
+    padding-left: 0;
+    vertical-align: top;
+    background: #ffffff;
+}
+
+#page p:not(#page .display-blocks p), #page h1:not(#page .display-blocks h1), #page h2:not(#page .display-blocks h2), 
+#page h3:not(#page .display-blocks h3), #page a:not(#page .display-blocks a), #page img:not(#page .display-blocks img), 
+#page dt:not(#page .display-blocks dt){
+    margin-right: 10px;
+    margin-top:10px;
+    margin-left:10px;
+}
+
+#page .homepage{
+    margin-left:40px !important;
+    margin-top:10px !important;
+}
+
+/* Sides of the page */
+body {
+    width: 1100px;
+    height: 100%;
+    margin: auto;
+    border: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    background: #acdeff;
+}
+
+/* Page header */
+header {
+    height: 125px;
+    width: 1100px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: #2535de;
+    color: #FFFFFF;
+}
+
+header h1 {
+    padding: 1em;
+    margin: 0;
+}
+
+/* Page header */
+footer {
+    height: 3em;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    background: #2535de;
+    color: #FFFFFF;
+    clear: both;
+}
+
+/* Errors */
+.errors {
+    display: inline-block;
+    border: 2px solid red;
+    color: red;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-left: 10px;
+}
+  
+.errors ul {
+    margin-bottom: 0;
+    padding-left: 1em;
+    text-align:left;
+}
+
+/* Lists */
+
+table {
+    border-collapse: collapse;
+    vertical-align: top;
+}
+  
+table.list {
+    width: 100%;
+}
+  
+table.list tr td {
+    border: 1px solid #999999;
+    text-align: center;
+}
+  
+table.list tr th {
+    border: 1px solid #0055DD;
+    background: #0055DD;
+    color: white;
+    text-align: center;
+}
+
+/* Session messages */
+#message {
+    color:#0055DD;
+    background: white;
+    border: 2px solid #0055DD;
+    padding: 1em 15px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+    width: 300px;
+    text-align: center;
+}
+
+/* Operations */
+#operations {
+    clear: both;
+    margin: 1em 0 1em 0;
+}
+  
+dl {
+    overflow: hidden;
+    margin: 0.5em 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 3em;
+}
+
+/* Display blocks on homepage */
+
+.display-blocks {
+    margin-top: 50px;
+}
+  
+.display-blocks .display {
+    float: left;
+    width: 285px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
