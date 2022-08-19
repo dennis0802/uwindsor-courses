@@ -69,7 +69,7 @@
             <form action="<?php echo url_for('/product.php?prod_id=' . h(u($id))); ?>" method="post">
                 <div id="total">
                     <p>In Stock: <?php echo $product['stock']; ?></p>
-                    <label for="amount">Amount</label>
+                    <label for="amount">Add Amount to Cart:</label>
                     <input type="number" name="amount" value="<?php echo h($amount)?>" min="1" max="<?php echo h($product['stock']);?>" /><br /><br />
                 <?php 
                     if(!isset($_SESSION['user_id'])){
