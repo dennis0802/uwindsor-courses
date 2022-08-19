@@ -6,7 +6,7 @@
         redirect_to(url_for('/staff/index.php'));
     }
     else if(is_user_logged_in()){
-        redirect_to(url_for('/account.php'));
+        redirect_to(url_for('/account/index.php'));
     }
 ?>
 
