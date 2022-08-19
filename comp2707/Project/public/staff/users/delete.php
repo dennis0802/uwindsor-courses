@@ -36,7 +36,7 @@
 
                 <form action="<?php echo url_for('/staff/users/delete.php?id=' . h(u($user['id']))); ?>" method="post">
                     <div id="operations">
-                        <input type="submit" name="commit" value="Delete Admin" />
+                        <input type="submit" name="commit" value="Delete User" />
                     </div>
                 </form>
             </div>
