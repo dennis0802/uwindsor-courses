@@ -103,28 +103,25 @@
                         <dt>Confirm Password</dt>
                         <dd><input type="password" name="confirmPass" value=""/></dd>
                     </dl>
+
                     <dl>
-                    <dt>Confirm Password</dt>
-                    <dd><input type="password" name="confirmPass" value=""/></dd>
-                </dl>
-                <dl>
-                    <dt>Security Question</dt>
-                    <select name="securityQuestion">
-                        <option value="Select a question..." disabled selected>Select a question...</option>
-                        <option value="The name of your first pet?">The name of your first pet?</option>
-                        <option value="Favourite teacher/professor?">Favourite teacher/professor?</option>
-                        <option value="The first concert you attended?">The first concert you attended?</option>
-                        <option value="The make and model of your first car?">The make and model of your first car?</option>
-                        <option value="Who was your first roommate?">Who was your first roommate?</option>
-                        <option value="The first book you read?">The first book you read?</option>
-                        <option value="Month and year of your graduation?">Month and year of your graduation?</option>
-                        <option value="In what city did your mother and father meet?">In what city did your mother and father meet?</option>
-                    </select>
-                </dl>
-                <dl>
-                    <dt>Answer</dt>
-                    <dd><input type="text" name="confirmPass" value=""/></dd>
-                </dl>
+                        <dt>Security Question</dt>
+                        <select name="securityQuestion">
+                            <option value="Select a question..." disabled selected>Select a question...</option>
+                            <option value="The name of your first pet?">The name of your first pet?</option>
+                            <option value="Favourite teacher/professor?">Favourite teacher/professor?</option>
+                            <option value="The first concert you attended?">The first concert you attended?</option>
+                            <option value="The make and model of your first car?">The make and model of your first car?</option>
+                            <option value="Who was your first roommate?">Who was your first roommate?</option>
+                            <option value="The first book you read?">The first book you read?</option>
+                            <option value="Month and year of your graduation?">Month and year of your graduation?</option>
+                            <option value="In what city did your mother and father meet?">In what city did your mother and father meet?</option>
+                        </select>
+                    </dl>
+                    <dl>
+                        <dt>Answer</dt>
+                        <dd><input type="text" name="answer" value=""/></dd>
+                    </dl>
 
                     <p>
                         UserIDs should be between 4-25 characters long and include at least one number.
