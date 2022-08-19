@@ -517,12 +517,13 @@
       shift_category_positions(0, $category['position']);
 
       $sql = "INSERT INTO category ";
-      $sql .= "(catName, position, totalPurchases, visible) ";
+      $sql .= "(catName, position, totalPurchases, visible, description) ";
       $sql .= "VALUES (";
       $sql .= "'" . db_escape($db, $category['catName']) . "',";
       $sql .= "'" . db_escape($db, $category['position']) . "',";
       $sql .= "'" . db_escape($db, 0) . "', ";
-      $sql .= "'" . db_escape($db, $category['visible']) . "'";
+      $sql .= "'" . db_escape($db, $category['visible']) . "',";
+      $sql .= "'" . db_escape($db, $category['description']) . "'";
       $sql .= ")";
 
       // Result will be TRUE/FALSE - either query succeeded or failed
@@ -1611,8 +1612,8 @@
       // stock
       // Make sure we are working with an integer
       $stock_int = (int) $product['stock'];
-      if($stock_int <= 0) {
-        $errors[] = "Stock must be greater than zero.";
+      if($stock_int < 0) {
+        $errors[] = "Stock cannot be negative.";
       }
       if($stock_int > 999) {
         $errors[] = "Stock must be less than 999.";
