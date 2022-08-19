@@ -28,6 +28,27 @@
 
     $page_title = "View Cart";
     $total = 0.00;
+
+    // Correct count amount bought if more than what's in stock, default to max amt in stock
+    if(isset($_SESSION['cart'])){
+        foreach($productIDs as $productID){ 
+            $cartProduct = find_product_by_id($productID);
+            // Prevent a logical issue where product may be in a user's cart but another user has bought the last
+            // stock at roughly the same time, automatically remove it from the cart
+            if($cartProduct['stock'] == 0){
+                $_SESSION['status'] = 'One or more items have been automatically removed from your cart because it has gone out of stock recently.';
+                $cartCount -= $_SESSION['cart'][$productID];
+                unset($_SESSION['cart'][$productID]);
+                $productIDs = array_keys($_SESSION['cart']);
+            }
+            else if($cartProduct['stock'] < $_SESSION['cart'][$productID]){
+                $diff = $_SESSION['cart'][$productID] - $cartProduct['stock'];
+                $_SESSION['cart'][$productID] = $cartProduct['stock'];
+                $cartCount -= $diff;
+                $productIDs = array_keys($_SESSION['cart']);
+            }
+        }
+    }
 ?>
 
 <?php include(SHARED_PATH . '/public_header.php') ?>
