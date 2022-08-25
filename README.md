@@ -15,6 +15,7 @@ As of August 17, 2022:
 * COMP2707: Advanced Web Design - HTML, CSS, JavaScript, PHP, mySQL
 * COMP3220: Object-Oriented Software Analysis and Design - C#
 * COMP3300: Operating System Fundamentals - C
+* COMP3670: Computer Networks - no programming
 
 Future Courses (Tenative)
 * COMP3520 - Intro to Computer Graphics
