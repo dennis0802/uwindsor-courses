@@ -1,6 +1,6 @@
 # uwindsor-courses
 Coursework from UWindsor courses:
-As of August 17, 2022:
+As of January 9, 2023
 * COMP1400: Intro to Algorithms and Programming I - C 
 * COMP1410: Intro to Algorithms and Programming II - C
 * COMP2120: Object-Oriented Programming - Java
