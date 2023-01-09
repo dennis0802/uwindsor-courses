@@ -16,11 +16,12 @@ As of August 17, 2022:
 * COMP3220: Object-Oriented Software Analysis and Design - C#
 * COMP3300: Operating System Fundamentals - C
 * COMP3670: Computer Networks - no programming
+* COMP3520: Introduction to Computer Graphics - C and OpenGL
+* COMP3710: Artificial Intelligence Concepts - Python
+* COMP4770: Artificial Intelligence for Games - C# and Unity
+* COMP4990: Project Management, Techniques, and Tools - tentatively C#, SQLite, and Unity
 
 Future Courses (Tenative)
-* COMP3520 - Intro to Computer Graphics
-* COMP3710 - Artificial Intelligence Concepts
-* COMP4770 - Artificial Intelligence for Games
-* COMP4990 - Project Management, Techniques, and Tools
+* COMP3500 - Intro to Multimedia Systems
 * COMP4150 - Advanced and Practical Database Systems
-* 
+* COMP4400 - Principles of Programming Languages
