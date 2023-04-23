@@ -8,6 +8,7 @@ Materials, Scene and Scripts are included in Assets. The rest files will be auto
 - Combat by Mingxi Guo and Arthur Wei
 - Demo videos:
     - 2022/04/10 = UView site is retiring later in 2022; videos are unavailable
+    - Video available on request
 
 **Note to Grader:**
 - Start with "MainScene", this contains the splash screen and will transition to the other scenes
