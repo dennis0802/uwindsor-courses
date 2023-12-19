@@ -1,0 +1,19 @@
+<test>
+    <Q a="E">
+        <question>Which of the following is not an OO programing language?</question>
+        <item>Java</item>
+        <item>C++</item>
+        <item>Smalltalk</item>
+        <item>Simula 67</item>
+        <item>None of the above.</item>
+    </Q>
+
+    <Q a="E">
+        <question>Which of the following is not a declarative language?</question>
+        <item>Java</item>
+        <item>Prolog</item>
+        <item>SQL</item>
+        <item>Scheme</item>
+        <item>None of the above.</item>
+    </Q>
+</test>

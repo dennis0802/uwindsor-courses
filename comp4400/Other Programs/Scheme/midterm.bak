@@ -1,0 +1,7 @@
+#lang racket
+(define (fct F Lst)
+    (if(null? Lst)
+    Lst
+    (cons (F (car Lst)) 1
+          )
+    ))

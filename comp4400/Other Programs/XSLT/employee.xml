@@ -1,0 +1,22 @@
+<source>
+<!--<companyName>Principles of Programming Languages</companyName>-->
+<employee>
+    <firstName>Joe</firstName>
+    <surName>Smith</surName>
+</employee>
+
+<employee>
+    <firstName>Andrew</firstName>
+    <surName>Wang</surName>
+    <supervisor>
+        <employee>
+            <firstName>Steve</firstName>
+            <surName>Miller</surName>
+        </employee>
+        <employee>
+            <firstName>John</firstName>
+            <surName>Doe</surName>
+        </employee>
+    </supervisor>
+</employee>
+</source>

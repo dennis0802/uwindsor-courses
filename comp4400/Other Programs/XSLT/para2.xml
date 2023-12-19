@@ -1,0 +1,7 @@
+<doc>
+<para>This is a <emphasis>test</emphasis>.
+ <emphasis>Nested 
+<emphasis>emphasis</emphasis>
+ </emphasis>.
+</para>
+</doc>

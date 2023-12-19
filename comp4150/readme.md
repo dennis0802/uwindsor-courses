@@ -5,3 +5,5 @@ application development tools needed in the industry. The course completes datab
 theory initiated in COMP-3150 and then adds database application development languages. Students
 will be exposed to the running environments (e.g., their compilers) and applying these on the database
 theory and design of the first part to develop full application. 
+
+Code available upon request.

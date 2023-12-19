@@ -1,6 +1,6 @@
 # uwindsor-courses
 Coursework from UWindsor courses:
-As of January 9, 2023
+Completed as of Dec. 19, 2023
 * COMP1400: Intro to Algorithms and Programming I - C 
 * COMP1410: Intro to Algorithms and Programming II - C
 * COMP2120: Object-Oriented Programming - Java
@@ -19,9 +19,6 @@ As of January 9, 2023
 * COMP3520: Introduction to Computer Graphics - C and OpenGL
 * COMP3710: Artificial Intelligence Concepts - Python
 * COMP4770: Artificial Intelligence for Games - C# and Unity
-* COMP4990: Project Management, Techniques, and Tools - tentatively C#, SQLite, and Unity
-
-Future Courses (Tenative)
-* COMP3500 - Intro to Multimedia Systems
-* COMP4150 - Advanced and Practical Database Systems
-* COMP4400 - Principles of Programming Languages
+* COMP4990: Project Management, Techniques, and Tools - C#, SQLite, and Unity
+* COMP4150 - Advanced and Practical Database Systems - SQL, Python
+* COMP4400 - Principles of Programming Languages - Prolog, Scheme, Java, XSLT, AspectJ
